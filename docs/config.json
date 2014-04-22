@@ -1,0 +1,14 @@
+{
+	"title": "Mapilary Integration Starter",
+	"tagline": "Last Mile Logistics",
+	"docs_path": "docs",
+	"image": "",
+	"theme": "red",
+	"template":"default",
+	"toggle_code": true,
+	"date_modified": true,
+	"repo": "",
+	"twitter": ["MapilaryCo"],
+	"links": {
+	}
+}
