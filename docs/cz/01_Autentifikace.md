@@ -53,9 +53,3 @@ Authorization:Bearer access_token
 ```
 
 Po vypršení platnosti token je nutné vygenerovat nový, stejným způsobem.
-
-
-### Test
-
-[testovací volání](https://mapilary.com/api-docs/#!/auth/userLogin_post_0)
-

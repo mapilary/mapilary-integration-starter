@@ -5,17 +5,14 @@ Management of the jobs (deliveries) includes the following actions:
 * updating job details
 
 
-Mapilary API offers more methods, however these are not required to be implemented during the integration. The methods 
-are being used internally for communication among Mapilary Console, Mapilary Courier and Mapilary Dispatcher.
-These methods are already configured and included in Mapilary product.
+Mapilary API offers more methods, however these are not required to be implemented during the integration. These methods are used internally for communication among Mapilary Console, Mapilary Courier and Mapilary Dispatcher. The methods are already configured and included in Mapilary product.
 
-All activities falling within the user management are located under ***baseUrl*** /deliveries.
-Description of the in/out parameters and examples of the requests to the API are located under 
+All activities falling within the user management are located under ***baseUrl*** /deliveries. Description of the in/out parameters and examples of the requests to the API are located under 
 [https://mapilary.com/api-docs](https://mapilary.com/api-docs/#!/deliveries)
 Simply try and test it via the same web link.
 
 
-### Creating jobs (=deliveries)
+### Creating jobs (deliveries)
 
 One or multiple jobs can be created via a single API request.
 Jobs are created by sending HTTP POST request.
@@ -36,14 +33,14 @@ company     - filled out automatically
 duration    - duration of the job - automatically calculated time, taking into account distance between the pick-up and the drop address
 state       - job status - set to "Created" when a new record is saved (optional)
 **addresses** - address field *
-validFrom   - beginning of the delivery window - time, since when the consignee is present on the address (optional)
-validTo     - end of the delivery window - time, until when the consignee is present on the address (optional)
+validFrom   - beginning of the delivery window. The time, since when the consignee is present at the address (optional)
+validTo     - end of the delivery window. The time, until when the consignee is present at the address (optional)
 consignee   - consignee's full name (optional)
 phoneNr     - consignee's phone number (mobile, ...) (optional)
 email       - consignee's e-mail address (optional)
-city        - address - city (optional)
-street      - address - street (optional)
-housenumber - address - house number (optional)
+city        - name of the city (optional)
+street      - name of the street (optional)
+housenumber - house number (optional)
 coords      - geo-location coordinates (lat/lon) (optional)
 
     {
@@ -90,10 +87,9 @@ coords      - geo-location coordinates (lat/lon) (optional)
         ]
     }
 
-### Notes
+#### Notes
 
-* The address field usually contains at least 2 addresses:
-
+\* The address field usually contains at least 2 addresses:
     - delivery pick-up place (where the courier picks up the delivery) - type pickup
     - delivery drop place (where the courier hands over the delivery) - type drop
 

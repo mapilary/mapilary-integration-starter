@@ -6,8 +6,7 @@ Management of the users includes the following actions:
 * changing the user profiles (PATCH - updateProfile)
 * changing the passwords (PATCH - changePassword)
 
-Each user must have assigned one of the roles. The role defines user's access level and specific permissions 
-for the data manipulation. The user logs in to the system via a username & password OR e-mail address & password. 
+Each user must have assigned one of the roles. The role defines user's access level and specific permissions for the data manipulation. The user logs in to the system via username & password OR e-mail address & password. 
 
 User Roles:
 
@@ -15,21 +14,18 @@ User Roles:
 * dispatcher
 * courier
 
-***Administrator*** is the role with unlimited permissions. For the sake of security, we advise configuring a single administrator for each company.
-Administrator usually performs the following actions:
+***Administrator*** is the role with unlimited permissions. For the sake of security, we advise configuring a single administrator for each company. Administrator usually performs the following actions:
 
 * creating and managing user accounts
 
 
-***Dispatcher*** is a person, who primarily assigns jobs (deliveries) to the couriers.
-Dispatcher usually performs the following actions:
+***Dispatcher*** is a person, who primarily assigns jobs (deliveries) to the couriers. Dispatcher usually performs the following actions:
 
 * creating and managing jobs
 * assigning jobs to the couriers
 
 
-***courier*** is a person, who performs the job in the field. (e.g. picking up the parcels and delivering them to the consignees)
-Courier usually performs the following actions:
+***Courier*** is a person, who performs the job in the field (e.g. picking up the parcels and delivering them to the consignees). Courier usually performs the following actions:
 
 * accepting jobs assigned by the dispatcher
 * marking the jobs as completed (e.g. parcel successfully delivered)
@@ -85,14 +81,13 @@ email       - e-mail (optional) ***
 }
 ```
 #### Notes
-\*  The company name is typically inherited from the administrator's name (who is creating the new user)
-** each user can have more roles assigned
+\*  The company name is typically inherited from the administrator's name (who is creating the new company)
+** each user can have multiple roles assigned
 *** if the e-mail address is entered, the user can use it to log in to the system
 
 The method also contains an optional parameter upsert (which is part of the URL): /users?upsert=true
 
-Parameter upsert=true ensures update of the users's data (in case the user already exists in the system). 
-In case the upsert parameter is not set, API returns an error:
+Parameter upsert=true ensures update of the user data (in case the user already exists in the system). In case the upsert parameter is not set, API returns an error:
 
 ```json
 {
